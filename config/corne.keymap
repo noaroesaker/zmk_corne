@@ -50,10 +50,10 @@
 
         number {
             bindings = <
-&kp PIPE   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp UNDERSCORE
-&kp LCTRL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8           &kp N9    &kp N0    &kp MINUS
-&kp LSHFT  &trans    &ALFA   &trans    &trans    &trans       &kp UNDER  &kp PLUS  &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &trans    &trans    &trans       &kp RET    &trans    &kp RALT
+&kp PIPE   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT              &kp CARET        &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp UNDERSCORE
+&kp LCTRL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                 &kp N6           &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+&kp LSHFT  &trans    &ALFA   &trans    &trans    &kp LS(NON_US_HASH)    &kp NON_US_HASH  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
+                             &trans    &trans    &trans                 &kp RET          &trans    &kp RALT
             >;
         };
 
