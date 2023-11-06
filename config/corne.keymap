@@ -16,13 +16,14 @@
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp LALT>;
         };
-        alfa: alfa {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALFA";
-            bindings = <&kp N2>, <&kp N2>;
+    };
 
+    macros {
+        ALFA: ALFA {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            bindings = <&kp RA(N2)>;
+            label = "ALFA";
         };
     };
 
@@ -37,30 +38,34 @@
                          &ESC_LALT  &lt 2 DEL  &kp SPACE    &kp BSPC  &kp LGUI  &mo 3
             >;
         };
+
         colemakdh {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F    &kp P    &kp B        &kp J     &kp L  &kp U      &kp Y    &kp SEMI  &kp LBKT
-&kp LCTRL  &kp A  &kp R  &kp S    &kp T    &kp G        &kp M     &kp N  &kp E      &kp I    &kp O     &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp D    &kp V        &kp K     &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+&kp TAB    &kp Q  &kp W  &kp F      &kp P      &kp B        &kp J     &kp L     &kp U      &kp Y    &kp SEMI  &kp LBKT
+&kp LCTRL  &kp A  &kp R  &kp S      &kp T      &kp G        &kp M     &kp N     &kp E      &kp I    &kp O     &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp D      &kp V        &kp K     &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp RET
                          &ESC_LALT  &lt 2 DEL  &kp SPACE    &kp BSPC  &kp LGUI  &mo 3
             >;
         };
+
         number {
             bindings = <
-&kp PIPE   &kp EXCL  &kp AT  &kp HASH    &kp DLLR      &kp PRCNT       &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp PLUS
-&kp LCTRL  &kp N1    &kp N2  &kp N3      &kp N4        &kp N5          &kp N6     &kp N7    &kp N8           &kp N9    &kp N0    &kp EQUAL
-&kp LSHFT  &trans    &alfa   &trans      &trans        &trans          &kp UNDER  &kp PLUS  &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1    &kp RET    &trans    &kp RALT
+&kp PIPE   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp UNDERSCORE
+&kp LCTRL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8           &kp N9    &kp N0    &kp MINUS
+&kp LSHFT  &trans    &ALFA   &trans    &trans    &trans       &kp UNDER  &kp PLUS  &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+                             &trans    &trans    &trans       &kp RET    &trans    &kp RALT
             >;
         };
+
         function {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3      &kp F4        &kp F5          &kp F6      &kp F7            &kp F8    &kp F9   &kp F10   &kp BSPC
-&trans  &kp F11  &kp F12  &kp F13     &kp F14       &kp F15         &kp F16     &kp F17           &kp F18   &kp F19  &kp F20   &kp BSPC
-&mo 4   &kp F21  &kp F22  &kp F23     &kp F24       &trans          &kp K_PREV  &kp K_NEXT        &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
-                          &trans  &trans  &trans    &kp RET     &kp K_PLAY_PAUSE  &kp RALT
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp F6      &kp F7            &kp F8    &kp F9   &kp F10   &kp BSPC
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp F16     &kp F17           &kp F18   &kp F19  &kp F20   &kp BSPC
+&mo 4   &kp F21  &kp F22  &kp F23  &kp F24  &trans     &kp K_PREV  &kp K_NEXT        &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
+                          &trans   &trans   &trans     &kp RET     &kp K_PLAY_PAUSE  &kp RALT
             >;
         };
+
         config {
             bindings = <
 &trans      &trans        &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &tog 0
